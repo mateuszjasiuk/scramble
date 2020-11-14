@@ -15,6 +15,7 @@
         (let [response (app (mock/request :get "/scramble?str1=asd&str2=asdf"))]
           (is (= (first @args) "asd"))
           (is (= (last @args) "asdf"))
+          (is (= (:body response) "{\"scramble?\":true}"))
           (is (= (:status response) 200))))))
 
   (testing "not-found route"
