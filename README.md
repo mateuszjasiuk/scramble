@@ -1,6 +1,6 @@
 # scramble
 
-FIXME
+Scramble strings :)
 
 ## Prerequisites
 
@@ -10,10 +10,9 @@ You will need [Leiningen][] 2.0.0 or above installed.
 
 ## Running
 
-To start a web server for the application, run:
-
-    lein ring server
+To start a client `lein build-dev:client`
+To start a service `lein build-dev:service`
 
 ## License
 
-Copyright © 2020 FIXME
+FREE

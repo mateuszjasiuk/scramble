@@ -20,7 +20,8 @@
             [lein-cljsbuild "1.1.8"]]
   :resource-paths ["target" "resources"]
   :aliases {"fig" ["trampoline" "run" "-m" "figwheel.main"]
-            "build-dev" ["trampoline" "run" "-m" "figwheel.main" "-b" "dev" "-r"]}
+            "build-dev:client" ["trampoline" "run" "-m" "figwheel.main" "-b" "dev" "-r"]
+            "build-dev:service" ["ring" "server-headless" "3003"]}
   :ring {:handler scramble.handler/app}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
